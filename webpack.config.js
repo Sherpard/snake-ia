@@ -1,3 +1,5 @@
+// This file is a dev config, this rule does not apply
+/* eslint-disable node/no-unpublished-require */
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');

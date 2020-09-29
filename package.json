@@ -1,13 +1,16 @@
 {
   "author": "Sherpard",
+  "version": "1.0.0",
+  "license": "MIT",
+  "name": "snake-ia",
+  "description": "snake game with IA background",
+  "private": true,
+  "homepage": "https://github.com/Sherpard/snake-ia#readme",
   "bugs": {
     "url": "https://github.com/Sherpard/snake-ia/issues"
   },
-  "description": "snake game with IA background",
   "devDependencies": {
     "@types/node": "^13.11.1",
-    "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.1.1",
     "gts": "^2.0.2",
     "html-loader": "^1.3.1",
     "serve": "^11.3.2",
@@ -15,18 +18,16 @@
     "typescript": "^3.8.3",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.1.1"
   },
-  "homepage": "https://github.com/Sherpard/snake-ia#readme",
   "keywords": [
     "snake",
     "game",
     "ia",
     "typescript"
   ],
-  "license": "MIT",
-  "name": "snake-ia",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sherpard/snake-ia.git"
@@ -36,14 +37,12 @@
     "builddev": "webpack --mode development",
     "check": "gts check",
     "clean": "gts clean",
-    "compile": "tsc",
     "fix": "gts fix",
     "posttest": "npm.cmd run check",
-    "prepare": "npm.cmd run compile",
-    "pretest": "npm.cmd run compile",
+    "prepare": "npm.cmd run build",
+    "pretest": "npm.cmd run build",
     "serve": "serve -s src",
     "start": "webpack-dev-server --mode development --open",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "version": "1.0.0"
+  }
 }
