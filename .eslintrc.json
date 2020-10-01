@@ -1,4 +1,9 @@
 {
   "extends": "./node_modules/gts/",
-  "env": {"browser": true}
+  "env": {"browser": true},
+  "rules": {
+    "consistent-return": "error",
+    "@typescript-eslint/no-non-null-assertion": "warn",
+    "@typescript-eslint/no-empty-function": "warn"
+  }
 }
