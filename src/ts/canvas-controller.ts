@@ -1,6 +1,6 @@
 import {Board, BOARD_TILE} from './board.class';
-import {Point2D} from './point-2d.interface';
-import {Rectangle2D} from './rect-2d.interface';
+import {Point2D} from './utils/point-2d.interface';
+import {Rectangle2D} from './utils/rect-2d.interface';
 import {Snake} from './snake.class';
 
 export class CanvasController {
@@ -68,7 +68,12 @@ export class CanvasController {
     if (apple === null) {
       return;
     }
+
     this.drawTile('#FF0000', this.getTilePosition(apple, tileSize));
+
+    this.context.font = '20px sans-serif';
+    const text = `Apple at: ${apple.x}x${apple.y}`;
+    this.context.strokeText(text, 0, 25);
   }
 
   private drawBoard(board: Board, tileSize: Point2D): void {

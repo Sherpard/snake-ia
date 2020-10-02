@@ -1,6 +1,6 @@
 import {SnakeController} from './controller/controller.interface';
 import {SNAKE_HEADING} from './enum/snake-heading.enum';
-import {Point2D} from './point-2d.interface';
+import {Point2D} from './utils/point-2d.interface';
 export class Snake {
   private readonly coordinates: Point2D[];
 
@@ -26,7 +26,13 @@ export class Snake {
   }
 
   public getHead(): Point2D {
-    return this.getHead();
+    return {x: this.head.x, y: this.head.y};
+  }
+
+  public grow(): void {
+    const lastCoordinate: Point2D = this.coordinates.pop() || {x: -10, y: -1};
+    this.coordinates.push(lastCoordinate);
+    this.coordinates.push(lastCoordinate);
   }
 
   public doTick(): void {

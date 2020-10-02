@@ -1,4 +1,4 @@
-import {Point2D} from './point-2d.interface';
+import {Point2D} from './utils/point-2d.interface';
 
 export class Board {
   private readonly width: number;
@@ -7,7 +7,6 @@ export class Board {
   private readonly tiles: BOARD_TILE[][];
 
   constructor(width: number, height: number) {
-    // Offset the walls
     this.width = width;
     this.height = height;
 
